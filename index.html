@@ -1,1 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Islamic Companion - Read the Quran and learn daily duas.">
+
+    <title>Islamic Companion</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <h1>🌙 Islamic Companion</h1>
+        <p>Qur'an • Duas • Dhikr</p>
+    </header>
+
+
+    <!-- Main content -->
+    <main>
+
+        <!-- Welcome section -->
+        <section class="welcome">
+            <h2>السلام عليكم</h2>
+
+            <p>
+                Welcome to Islamic Companion.
+                Read the Qur'an and explore Islamic resources.
+            </p>
+
+            <button onclick="openQuran()">
+                📖 Read Qur'an
+            </button>
+        </section>
+
+
+        <!-- Feature cards -->
+        <section class="features">
+
+            <div class="card"
+                 onclick="openQuran()">
+
+                <div class="icon">📖</div>
+
+                <h3>Qur'an</h3>
+
+                <p>
+                    Read the Qur'an in Arabic
+                    with translation.
+                </p>
+
+            </div>
+
+
+            <div class="card"
+                 onclick="openDuas()">
+
+                <div class="icon">🤲</div>
+
+                <h3>Duas</h3>
+
+                <p>
+                    Discover useful daily duas
+                    and supplications.
+                </p>
+
+            </div>
+
+
+            <div class="card"
+                 onclick="openTasbih()">
+
+                <div class="icon">📿</div>
+
+                <h3>Tasbih</h3>
+
+                <p>
+                    Keep track of your dhikr
+                    with a digital counter.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quran -->
+        <section id="quran"
+                 class="quran">
+
+            <h2>سورة الفاتحة</h2>
+
+            <p class="surah-info">
+                Surah Al-Fatihah • 7 Ayahs
+            </p>
+
+
+            <!-- Ayah 1 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+                </div>
+
+                <p class="translation">
+                    In the name of Allah,
+                    the Most Compassionate,
+                    the Most Merciful.
+                </p>
+
+            </article>
+
+
+            <!-- Ayah 2 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ
+                </div>
+
+                <p class="translation">
+                    All praise is for Allah,
+                    Lord of the worlds.
+                </p>
+
+            </article>
+
+
+            <!-- Ayah 3 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    الرَّحْمَنِ الرَّحِيمِ
+                </div>
+
+                <p class="translation">
+                    The Most Compassionate,
+                    the Most Merciful.
+                </p>
+
+            </article>
+
+
+            <!-- Ayah 4 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    مَالِكِ يَوْمِ الدِّينِ
+                </div>
+
+                <p class="translation">
+                    Master of the Day of Judgment.
+                </p>
+
+            </article>
+
+
+            <!-- Ayah 5 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    إِيَّاكَ نَعْبُدُ
+                    وَإِيَّاكَ نَسْتَعِينُ
+                </div>
+
+                <p class="translation">
+                    You alone we worship,
+                    and You alone we ask for help.
+                </p>
+
+            </article>
+
+
+            <!-- Ayah 6 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ
+                </div>
+
+                <p class="translation">
+                    Guide us to the Straight Path.
+                </p>
+
+            </article>
+
+
+            <!-- Ayah 7 -->
+            <article class="ayah">
+
+                <div class="arabic">
+                    صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ
+                    غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ
+                    وَلَا الضَّالِّينَ
+                </div>
+
+                <p class="translation">
+                    The path of those You have blessed,
+                    not those who have earned Your anger,
+                    nor those who have gone astray.
+                </p>
+
+            </article>
+
+
+            <!-- Quran controls -->
+            <div class="quran-controls">
+
+                <button onclick="previousSurah()">
+                    ◀ Previous
+                </button>
+
+                <button onclick="saveBookmark()">
+                    🔖 Bookmark
+                </button>
+
+                <button onclick="nextSurah()">
+                    Next ▶
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Duas -->
+        <section id="duas"
+                 class="hidden-section">
+
+            <h2>🤲 Daily Duas</h2>
+
+            <p>
+                Daily duas will be added here.
+            </p>
+
+        </section>
+
+
+        <!-- Tasbih -->
+        <section id="tasbih"
+                 class="hidden-section">
+
+            <h2>📿 Tasbih</h2>
+
+            <p id="counter">
+                0
+            </p>
+
+            <button onclick="increaseTasbih()">
+                + Dhikr
+            </button>
+
+            <button onclick="resetTasbih()">
+                Reset
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Islamic Companion 🌙
+        </p>
+
+        <p>
+            Built with ❤️ for the Ummah
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
